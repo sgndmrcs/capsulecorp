@@ -1,2 +1,14 @@
-# capsulecorp
-Atividade para desenvolvimento de disciplina OOB com uso do Java
+# ©️ Capsule Corp.
+### Atividade para desenvolvimento de disciplina _Orientação a Objetos_ com uso do Java.
+
+Desenvolvimento de atividades:
+- [x] Organização das classes para cadastro de usuários, divididos entre funcionários e clientes;
+- [ ] Atualização do Main para cadastro dos usuários;
+- [ ] Atualizar gets and sets;
+- [ ] Refinar textos do código;
+- [ ] Validar integração com Main;
+- [ ] Integração com banco de dados;
+
+### Documentação base para desenvolvimento da atividade:
+[Markdown no GIT](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+[Comandos básicos no GIT](https://comandosgit.github.io/)
