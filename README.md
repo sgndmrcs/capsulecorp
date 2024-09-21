@@ -3,6 +3,7 @@
 
 Desenvolvimento de atividades:
 - [x] Organização das classes para cadastro de usuários, divididos entre funcionários e clientes;
+- [x] Atualização para obter idades com base na data atual;
 - [ ] Atualização do Main para cadastro dos usuários;
 - [ ] Atualizar gets and sets;
 - [ ] Refinar textos do código;
@@ -11,4 +12,5 @@ Desenvolvimento de atividades:
 
 ### Documentação base para desenvolvimento da atividade:
 [Markdown no GIT](https://docs.github.com/pt/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+
 [Comandos básicos no GIT](https://comandosgit.github.io/)
