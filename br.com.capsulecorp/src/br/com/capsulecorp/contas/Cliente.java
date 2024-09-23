@@ -9,30 +9,30 @@ public class Cliente extends Usuario {
 	
 	Scanner sc = new Scanner(System.in);
 	
-	public void cadastrarCliente(String cargo) {
+	public void cadastrarCliente() {
 		super.cadastrar();
-		System.out.println("Digite o cargp: ");
-		cargo = sc.next();
-		codigoDoCliente = random.nextInt(1000) + 1;
+		System.out.println("Digite a profissao: ");
+		profissao = sc.next();
+		codigoDoCliente = random.nextInt(100000) + 1;
 		System.out.println("O código do cliente é: " + codigoDoCliente);
 		System.out.println("Cliente cadastrado com sucesso!");
-		return;
 		
 	}
+	
+	
 	public Cliente(int renda) {
 
 		System.out.println("Digite o Salario do funcionário: ");
 		this.renda = sc.nextInt();
-		
 		System.out.println("Salario do funcionário: " + this.renda);
 	}
+
 	
-//	public double obterIdade() {
-//		double idade = 2024 - ano;
-//		System.out.println("O funcionário tem " + idade + " anos de idade");
-//		return idade;
-//	}
 	
+	public Cliente() {
+	
+	}
+
 	public double reajustaRenda() {
 		System.out.println("Qual o percentual de reajuste do salário que deseja?");
 		double taxa = sc.nextInt();
@@ -43,17 +43,7 @@ public class Cliente extends Usuario {
 		return renda;
 	}
 	
-	public String promover() {
-		System.out.println("O cargo do funcionário é " + this.profissao);
-		System.out.println("Digite o cargo que deseja para seu funcionário: ");
-		this.profissao = sc.nextLine();
-		System.out.println("O cargo novo do funcionário é " + this.profissao);
-		return profissao;
-	}
-	public void cadastrarFuncionario() {
-		// TODO Auto-generated method stub
-		
-	}
+
 	
 	
 	
