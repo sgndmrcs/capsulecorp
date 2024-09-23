@@ -4,9 +4,9 @@
 Desenvolvimento de atividades:
 - [x] Organização das classes para cadastro de usuários, divididos entre funcionários e clientes;
 - [x] Atualização para obter idades com base na data atual;
-- [ ] Atualização do Main para cadastro dos usuários;
-- [ ] Atualizar gets and sets;
-- [ ] Refinar textos do código;
+- [x] Atualização do Main para cadastro dos usuários;
+- [x] Atualizar gets and sets;
+- [x] Refinar textos do código;
 - [ ] Validar integração com Main;
 - [ ] Integração com banco de dados;
 
