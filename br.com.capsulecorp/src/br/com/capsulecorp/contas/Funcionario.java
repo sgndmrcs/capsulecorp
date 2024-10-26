@@ -1,4 +1,5 @@
 package br.com.capsulecorp.contas;
+import br.com.capsulecorp.personalextradata.*;
 import java.util.Scanner;
 
 public class Funcionario extends Usuario {
@@ -6,20 +7,21 @@ public class Funcionario extends Usuario {
 	private int salario;
 	private String cargo, promover;
 	private int matricula;
-	
+
+	Endereco endereco = new Endereco();
 	Scanner sc = new Scanner(System.in);
+
+	public Funcionario() {
+
+	}
 	
 	public void cadastrarFuncionario() {
 		super.cadastrar();
 		System.out.println("Digite o cargo: ");
-		cargo = sc.next();
-		matricula = random.nextInt(1000) + 1;
-		System.out.println("A matrícula do funcionário é: " + matricula);
+		this.cargo = setCargo(sc.nextLine());
+		endereco.cadastraEndereco();
+		System.out.println("A matrícula do funcionário é: ");
 		System.out.println("Funcionário cadastrado com sucesso!");
-		
-	}
-	
-	public Funcionario() {
 		
 	}
 	
@@ -52,10 +54,38 @@ public class Funcionario extends Usuario {
 		System.out.println("O cargo novo do funcionário é " + this.cargo);
 	}
 
+	public int getSalario() {
+		return salario;
+	}
 
+	public void setSalario(int salario) {
+		this.salario = salario;
+	}
 
-	
-	
-	
+	@Override
+	public String getCargo() {
+		return cargo;
+	}
 
+	@Override
+	public String setCargo(String cargo) {
+		this.cargo = cargo;
+		return cargo;
+	}
+
+	public String getPromover() {
+		return promover;
+	}
+
+	public void setPromover(String promover) {
+		this.promover = promover;
+	}
+
+	public int getMatricula() {
+		return matricula;
+	}
+
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
+	}
 }

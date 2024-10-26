@@ -4,6 +4,8 @@ import java.util.Scanner;
 import java.util.random.*;
 import java.util.Calendar;
 import br.com.capsulecorp.contas.*;
+import br.com.capsulecorp.personalextradata.*;
+import br.com.capsulecorp.personalextradata.*;
 
 public class Main {
 
@@ -20,28 +22,40 @@ public class Main {
 		System.out.println("2 - Cadastrar novo cliente");
 		System.out.println("3 - Verificar informações");
 		System.out.println("4 - Sair do sistema");
+		System.out.println("0 - Teste de cadastro de endereço");
 		System.out.println(" ");
 		System.out.println("######################################################");
 		System.out.println(" ");
 		System.out.println("Digite o número da opção desejada: ");
+
 		int opcao = sc.nextInt();
-		
-		
+
 		switch (opcao) {
 		
-		case 1: 
+		case 1:
+
 			Funcionario func1 = new Funcionario();
 			func1.cadastrarFuncionario();
-			
+
 			break;
-			
-		case 2: 
+
+			case 0:
+
+				Endereco end1 = new Endereco();
+				end1.cadastraEndereco();
+
+				break;
+
+
+		case 2:
+
 			Cliente cliente1 = new Cliente();
 			cliente1.cadastrarCliente();
 			
 			break;
 		
-		case 3: 
+		case 3:
+
 			System.out.println("Qual tipo de usuário deseja verificar: ");
 			System.out.println(" ");
 			System.out.println("######################################################");
@@ -57,29 +71,31 @@ public class Main {
 			switch(tipoUsuario) {
 			
 			case 1:
+
 				System.out.println("Informações cadastradas para colaborador: ");
-				
-				
+
 				break;
 				
 			case 2:
+
 				System.out.println("Informações cadastradas para cliente: ");
-				
-				
-				sc.close();
+
 				break;
 			
 			}
 			
-		case 4: 
+		case 4:
+
 			System.out.println("Você está saindo do sistema, até logo!");
-			
-			sc.close();
+
 			break;
 			
 		}
+
+
+	}
 		
 		
 	}
 	
-}
+

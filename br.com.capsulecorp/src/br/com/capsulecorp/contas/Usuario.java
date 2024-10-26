@@ -1,19 +1,18 @@
 package br.com.capsulecorp.contas;
+import br.com.capsulecorp.auxiliar.ListaDeTelefonesNaoOrdenados;
+
 import java.util.Scanner;
 import java.util.Calendar;
-import java.util.Random;
-import java.time.LocalDate;
 
 public class Usuario {
 	
 	private int ano, mes, diaDoMes;
-	public String nome;
+	private String nome;
 	private String endereco;
-	private String contato;
+	private ListaDeTelefonesNaoOrdenados telefones;
 	private String cargo;
 	
 	Scanner sc = new Scanner(System.in);
-	Random random = new Random();
 	
 	public Usuario() {
 		
@@ -24,6 +23,7 @@ public class Usuario {
 		System.out.println("Digite o nome do usuário: ");
 		this.nome = sc.nextLine();
 		System.out.println("Nome do usuário: " + this.nome);
+
 	}
 	
 	public Usuario(int ano) {
@@ -31,29 +31,21 @@ public class Usuario {
 		System.out.println("Digite o ano de nascimento: ");
 		this.ano = sc.nextInt();
 		System.out.println("Ano de nascimento: " + this.ano);
+
 	}
 	
 	public void cadastrar() {
 		
 		System.out.println("Digite o nome: ");
-		nome = sc.next();
+		this.nome = setNome(sc.nextLine());
 		System.out.println("Digite o dia de nascimento: ");
-		diaDoMes = sc.nextInt();
+		this.diaDoMes = sc.nextInt();
 		System.out.println("Digite o mês de nascimento: ");
-		mes = sc.nextInt();
+		this.mes = sc.nextInt();
 		System.out.println("Digite o ano de nascimento: ");
-		ano = sc.nextInt();
-		System.out.println("Digite o endereço: ");
-		endereco = sc.next();
-		System.out.println("Digite o contato: ");
-		contato = sc.next();
-		
-		ano = this.ano;
-		this.mes = mes;
-		this.diaDoMes = diaDoMes;
-		this.nome = nome;
-		this.endereco = endereco;
-		this.contato = contato;
+		this.ano = sc.nextInt();
+		sc.nextLine();
+
 	}
 	
 	public void obterIdade() {
@@ -65,72 +57,39 @@ public class Usuario {
 		
 	}
 	
-	
 	public void promover() {
 		
 		System.out.println("O cargo do funcionário é " + this.cargo);
 		System.out.println("Digite o cargo que deseja para seu funcionário: ");
 		this.cargo = sc.nextLine();
 		System.out.println("O cargo novo do funcionário é " + this.cargo);
-	}
-	
 
-	public int getAno() {
-		return ano;
 	}
 
-	public void setAno(int ano) {
-		this.ano = ano;
+
+	public String getCargo() {
+		return cargo;
 	}
 
-	public int getMes() {
-		return mes;
-	}
-
-	public void setMes(int mes) {
-		this.mes = mes;
-	}
-
-	public int getDiaDoMes() {
-		return diaDoMes;
-	}
-
-	public void setDiaDoMes(int diaDoMes) {
-		this.diaDoMes = diaDoMes;
+	public String setCargo(String cargo) {
+		this.cargo = cargo;
+		return cargo;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(String nome) {
+	public String setNome(String nome) {
 		this.nome = nome;
+		return nome;
 	}
 
-	public String getEndereco() {
-		return endereco;
+	public ListaDeTelefonesNaoOrdenados getTelefones() {
+		return telefones;
 	}
 
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
+	public void setTelefones(ListaDeTelefonesNaoOrdenados telefones) {
+		this.telefones = telefones;
 	}
-
-	public String getContato() {
-		return contato;
-	}
-
-	public void setContato(String contato) {
-		this.contato = contato;
-	}
-
-	public String getCargo() {
-		return cargo;
-	}
-
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
-	}
-	
-
-
 }
